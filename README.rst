@@ -22,3 +22,46 @@ Step 01: Project folder
   │   └── .gitkeep
   └── docsource
       └── .gitkeep
+
+******************************************************
+Step 02: sphinx-quickstart
+******************************************************
+
+.. important:: 
+    
+    In order to replicate this project the following have been used: 
+    ``anaconda navigator (v1.10.0)``,
+    ``python (v3.8.5)``,
+    ``sphinx-quickstart (v3.4.1)``
+
+**Spinx** comes with a built-in utility to help start the documentation process. 
+Using **sphinx-quickstart** interactive tool you can quickly generate a complete documentation 
+directory and sample Makefile to be used with sphinx-build. More information can be 
+found at `sphinx-doc.org: sphinx-quickstart <https://www.sphinx-doc.org/en/master/man/sphinx-quickstart.html?highlight=sphinx-quickstart>`_
+
+.. code:: bash
+
+    cd docsource && sphinx-quickstart --no-sep
+
+--no-sep    if specified, create build directory under source directory.
+
+.. code:: 
+
+  project-name
+  ├── README.rst
+  ├── .gitignore
+  └── docs
+  │   └── .gitkeep
+  └── docsource
+      ├── _build
+      │   └── .gitkeep
+      ├── _static
+      │   └── .gitkeep
+      ├── _templates
+      │   └── .gitkeep
+      ├── .gitkeep
+      ├── conf.py
+      ├── index.rst
+      ├── make.bat
+      └── Makefile
+
