@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'ply_sphinx_docs_github_pages'
+project = 'Sphinx Docs'
 copyright = '2021, dMLT'
 author = 'dMLT'
 

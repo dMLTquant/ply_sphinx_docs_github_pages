@@ -65,3 +65,34 @@ found at `sphinx-doc.org: sphinx-quickstart <https://www.sphinx-doc.org/en/maste
       ├── make.bat
       └── Makefile
 
+******************************************************
+Step 03: test if setup has been successful
+******************************************************
+
+.. tip:: 
+    
+    Use **python** built-in **http.server** to serve local files. More information on **python http.server** can be found here
+`docs.python.org: http.server <https://docs.python.org/3/library/http.server.html>`_
+
+**one line command**
+
+.. code:: bash
+
+    make -C ./docsource html && python3 -m http.server 8000 --bind 127.0.0.1 --directory ./docsource/_build/html
+
+**or using the step by step approach**
+
+.. code:: bash
+
+    cd ./docsource
+    make html
+    cd ./_build/html
+    python3 -m http.server 8000 --bind 127.0.0.1 
+
+Now navigate to `localhost:8000 <http://localhost:8000>`_. 
+
+.. warning:: 
+    
+    Consider adding the **_build** directory to ``.gitignore`` to avoid committing these files to GitHub.
+    This folder is only used as a local development/testing environment and will not be used to serve the actual GitHub Pages website.
+    This repo contains these files for illustration purpose. 
