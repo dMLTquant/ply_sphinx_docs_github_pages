@@ -9,6 +9,7 @@ live_docs:
 
 github_docs:
 	rm -rf docs
+	mkdir ./docs && touch ./docs/.nojekyll
 	@cp -a ./README.rst ./docsource/README.rst
 	@make -C ./docsource html
 	@cp -a ./docsource/_build/html/. ./docs
