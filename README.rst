@@ -274,6 +274,7 @@ Add the following to the **root Makefile** and run ``make github_docs``:
 
     github_docs:
         rm -rf docs
+        mkdir ./docs && touch ./docs/.nojekyll
         @cp -a ./README.rst ./docsource/README.rst
         @make -C ./docsource html
         @cp -a ./docsource/_build/html/. ./docs 
@@ -281,6 +282,7 @@ Add the following to the **root Makefile** and run ``make github_docs``:
 This will:
 
 - remove docs folder cache that might have been previously built to allow for a fresh version 
+- add a ``.nojekyll`` file to `github.blog: Bypassing Jekyll on GitHub Pages <https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/>`_
 - copy the latest README.rst file (guide) into the ``docsource`` directory
 - run ``make html`` to build the documentation into the ``_build`` directory
 - the ``make html`` command is actually saved in the ``./docsource/Makfile``
