@@ -1,0 +1,6 @@
+fibonacci.approx\_fib.approx\_fib
+=================================
+
+.. currentmodule:: fibonacci.approx_fib
+
+.. autofunction:: approx_fib

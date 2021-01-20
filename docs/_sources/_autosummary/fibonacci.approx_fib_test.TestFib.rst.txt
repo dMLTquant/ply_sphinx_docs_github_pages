@@ -1,0 +1,98 @@
+fibonacci.approx\_fib\_test.TestFib
+===================================
+
+.. currentmodule:: fibonacci.approx_fib_test
+
+.. autoclass:: TestFib
+   :members:
+   :show-inheritance:
+   :inherited-members:
+   :special-members: __call__, __add__, __mul__
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~TestFib.addClassCleanup
+      ~TestFib.addCleanup
+      ~TestFib.addTypeEqualityFunc
+      ~TestFib.assertAlmostEqual
+      ~TestFib.assertAlmostEquals
+      ~TestFib.assertCountEqual
+      ~TestFib.assertDictContainsSubset
+      ~TestFib.assertDictEqual
+      ~TestFib.assertEqual
+      ~TestFib.assertEquals
+      ~TestFib.assertFalse
+      ~TestFib.assertGreater
+      ~TestFib.assertGreaterEqual
+      ~TestFib.assertIn
+      ~TestFib.assertIs
+      ~TestFib.assertIsInstance
+      ~TestFib.assertIsNone
+      ~TestFib.assertIsNot
+      ~TestFib.assertIsNotNone
+      ~TestFib.assertLess
+      ~TestFib.assertLessEqual
+      ~TestFib.assertListEqual
+      ~TestFib.assertLogs
+      ~TestFib.assertMultiLineEqual
+      ~TestFib.assertNotAlmostEqual
+      ~TestFib.assertNotAlmostEquals
+      ~TestFib.assertNotEqual
+      ~TestFib.assertNotEquals
+      ~TestFib.assertNotIn
+      ~TestFib.assertNotIsInstance
+      ~TestFib.assertNotRegex
+      ~TestFib.assertNotRegexpMatches
+      ~TestFib.assertRaises
+      ~TestFib.assertRaisesRegex
+      ~TestFib.assertRaisesRegexp
+      ~TestFib.assertRegex
+      ~TestFib.assertRegexpMatches
+      ~TestFib.assertSequenceEqual
+      ~TestFib.assertSetEqual
+      ~TestFib.assertTrue
+      ~TestFib.assertTupleEqual
+      ~TestFib.assertWarns
+      ~TestFib.assertWarnsRegex
+      ~TestFib.assert_
+      ~TestFib.countTestCases
+      ~TestFib.debug
+      ~TestFib.defaultTestResult
+      ~TestFib.doClassCleanups
+      ~TestFib.doCleanups
+      ~TestFib.fail
+      ~TestFib.failIf
+      ~TestFib.failIfAlmostEqual
+      ~TestFib.failIfEqual
+      ~TestFib.failUnless
+      ~TestFib.failUnlessAlmostEqual
+      ~TestFib.failUnlessEqual
+      ~TestFib.failUnlessRaises
+      ~TestFib.id
+      ~TestFib.run
+      ~TestFib.setUp
+      ~TestFib.setUpClass
+      ~TestFib.shortDescription
+      ~TestFib.skipTest
+      ~TestFib.subTest
+      ~TestFib.tearDown
+      ~TestFib.tearDownClass
+      ~TestFib.test_successful_approx_fib
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TestFib.longMessage
+      ~TestFib.maxDiff
+   
+   

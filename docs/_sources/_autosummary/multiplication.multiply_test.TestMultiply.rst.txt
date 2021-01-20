@@ -1,0 +1,98 @@
+multiplication.multiply\_test.TestMultiply
+==========================================
+
+.. currentmodule:: multiplication.multiply_test
+
+.. autoclass:: TestMultiply
+   :members:
+   :show-inheritance:
+   :inherited-members:
+   :special-members: __call__, __add__, __mul__
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~TestMultiply.addClassCleanup
+      ~TestMultiply.addCleanup
+      ~TestMultiply.addTypeEqualityFunc
+      ~TestMultiply.assertAlmostEqual
+      ~TestMultiply.assertAlmostEquals
+      ~TestMultiply.assertCountEqual
+      ~TestMultiply.assertDictContainsSubset
+      ~TestMultiply.assertDictEqual
+      ~TestMultiply.assertEqual
+      ~TestMultiply.assertEquals
+      ~TestMultiply.assertFalse
+      ~TestMultiply.assertGreater
+      ~TestMultiply.assertGreaterEqual
+      ~TestMultiply.assertIn
+      ~TestMultiply.assertIs
+      ~TestMultiply.assertIsInstance
+      ~TestMultiply.assertIsNone
+      ~TestMultiply.assertIsNot
+      ~TestMultiply.assertIsNotNone
+      ~TestMultiply.assertLess
+      ~TestMultiply.assertLessEqual
+      ~TestMultiply.assertListEqual
+      ~TestMultiply.assertLogs
+      ~TestMultiply.assertMultiLineEqual
+      ~TestMultiply.assertNotAlmostEqual
+      ~TestMultiply.assertNotAlmostEquals
+      ~TestMultiply.assertNotEqual
+      ~TestMultiply.assertNotEquals
+      ~TestMultiply.assertNotIn
+      ~TestMultiply.assertNotIsInstance
+      ~TestMultiply.assertNotRegex
+      ~TestMultiply.assertNotRegexpMatches
+      ~TestMultiply.assertRaises
+      ~TestMultiply.assertRaisesRegex
+      ~TestMultiply.assertRaisesRegexp
+      ~TestMultiply.assertRegex
+      ~TestMultiply.assertRegexpMatches
+      ~TestMultiply.assertSequenceEqual
+      ~TestMultiply.assertSetEqual
+      ~TestMultiply.assertTrue
+      ~TestMultiply.assertTupleEqual
+      ~TestMultiply.assertWarns
+      ~TestMultiply.assertWarnsRegex
+      ~TestMultiply.assert_
+      ~TestMultiply.countTestCases
+      ~TestMultiply.debug
+      ~TestMultiply.defaultTestResult
+      ~TestMultiply.doClassCleanups
+      ~TestMultiply.doCleanups
+      ~TestMultiply.fail
+      ~TestMultiply.failIf
+      ~TestMultiply.failIfAlmostEqual
+      ~TestMultiply.failIfEqual
+      ~TestMultiply.failUnless
+      ~TestMultiply.failUnlessAlmostEqual
+      ~TestMultiply.failUnlessEqual
+      ~TestMultiply.failUnlessRaises
+      ~TestMultiply.id
+      ~TestMultiply.run
+      ~TestMultiply.setUp
+      ~TestMultiply.setUpClass
+      ~TestMultiply.shortDescription
+      ~TestMultiply.skipTest
+      ~TestMultiply.subTest
+      ~TestMultiply.tearDown
+      ~TestMultiply.tearDownClass
+      ~TestMultiply.test_successful_multiply_2
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TestMultiply.longMessage
+      ~TestMultiply.maxDiff
+   
+   

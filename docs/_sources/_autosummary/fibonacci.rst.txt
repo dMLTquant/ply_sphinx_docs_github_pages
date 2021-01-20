@@ -1,0 +1,31 @@
+﻿fibonacci
+=========
+
+.. automodule:: fibonacci
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. autosummary::
+   :toctree:
+   :template: module.rst
+   :recursive:
+
+   fibonacci.approx_fib
+   fibonacci.approx_fib_test
+

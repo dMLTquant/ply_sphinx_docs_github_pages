@@ -1,0 +1,32 @@
+fibonacci.approx\_fib\_test
+===========================
+
+.. automodule:: fibonacci.approx_fib_test
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: class.rst
+      :nosignatures:
+   
+      TestFib
+   
+   
+
+   
+   
+   
+
+
+

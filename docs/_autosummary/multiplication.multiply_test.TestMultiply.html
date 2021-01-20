@@ -1,0 +1,847 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>multiplication.multiply_test.TestMultiply &#8212; Sphinx Docs  documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="mytoolbox" href="mytoolbox.html" />
+    <link rel="prev" title="multiplication.multiply_test" href="multiplication.multiply_test.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="multiplication-multiply-test-testmultiply">
+<h1>multiplication.multiply_test.TestMultiply<a class="headerlink" href="#multiplication-multiply-test-testmultiply" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="multiplication.multiply_test.TestMultiply">
+<em class="property">class </em><code class="sig-prename descclassname">multiplication.multiply_test.</code><code class="sig-name descname">TestMultiply</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">methodName</span><span class="o">=</span><span class="default_value">'runTest'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<p>Testing Multiply Function</p>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.addClassCleanup" title="multiplication.multiply_test.TestMultiply.addClassCleanup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addClassCleanup</span></code></a></p></td>
+<td><p>Same as addCleanup, except the cleanup items are called even if setUpClass fails (unlike tearDownClass).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.addCleanup" title="multiplication.multiply_test.TestMultiply.addCleanup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addCleanup</span></code></a></p></td>
+<td><p>Add a function, with arguments, to be called when the test is completed.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.addTypeEqualityFunc" title="multiplication.multiply_test.TestMultiply.addTypeEqualityFunc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addTypeEqualityFunc</span></code></a></p></td>
+<td><p>Add a type specific assertEqual style function to compare a type.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertAlmostEqual" title="multiplication.multiply_test.TestMultiply.assertAlmostEqual"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertAlmostEqual</span></code></a></p></td>
+<td><p>Fail if the two objects are unequal as determined by their difference rounded to the given number of decimal places (default 7) and comparing to zero, or by comparing that the difference between the two objects is more than the given delta.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertAlmostEquals</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertCountEqual" title="multiplication.multiply_test.TestMultiply.assertCountEqual"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertCountEqual</span></code></a></p></td>
+<td><p>Asserts that two iterables have the same elements, the same number of times, without regard to order.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertDictContainsSubset" title="multiplication.multiply_test.TestMultiply.assertDictContainsSubset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertDictContainsSubset</span></code></a></p></td>
+<td><p>Checks whether dictionary is a superset of subset.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertDictEqual</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertEqual" title="multiplication.multiply_test.TestMultiply.assertEqual"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertEqual</span></code></a></p></td>
+<td><p>Fail if the two objects are unequal as determined by the ‘==’ operator.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertEquals</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertFalse" title="multiplication.multiply_test.TestMultiply.assertFalse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertFalse</span></code></a></p></td>
+<td><p>Check that the expression is false.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertGreater" title="multiplication.multiply_test.TestMultiply.assertGreater"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertGreater</span></code></a></p></td>
+<td><p>Just like self.assertTrue(a &gt; b), but with a nicer default message.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertGreaterEqual" title="multiplication.multiply_test.TestMultiply.assertGreaterEqual"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertGreaterEqual</span></code></a></p></td>
+<td><p>Just like self.assertTrue(a &gt;= b), but with a nicer default message.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertIn" title="multiplication.multiply_test.TestMultiply.assertIn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertIn</span></code></a></p></td>
+<td><p>Just like self.assertTrue(a in b), but with a nicer default message.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertIs" title="multiplication.multiply_test.TestMultiply.assertIs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertIs</span></code></a></p></td>
+<td><p>Just like self.assertTrue(a is b), but with a nicer default message.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertIsInstance" title="multiplication.multiply_test.TestMultiply.assertIsInstance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertIsInstance</span></code></a></p></td>
+<td><p>Same as self.assertTrue(isinstance(obj, cls)), with a nicer default message.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertIsNone" title="multiplication.multiply_test.TestMultiply.assertIsNone"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertIsNone</span></code></a></p></td>
+<td><p>Same as self.assertTrue(obj is None), with a nicer default message.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertIsNot" title="multiplication.multiply_test.TestMultiply.assertIsNot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertIsNot</span></code></a></p></td>
+<td><p>Just like self.assertTrue(a is not b), but with a nicer default message.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertIsNotNone" title="multiplication.multiply_test.TestMultiply.assertIsNotNone"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertIsNotNone</span></code></a></p></td>
+<td><p>Included for symmetry with assertIsNone.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertLess" title="multiplication.multiply_test.TestMultiply.assertLess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertLess</span></code></a></p></td>
+<td><p>Just like self.assertTrue(a &lt; b), but with a nicer default message.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertLessEqual" title="multiplication.multiply_test.TestMultiply.assertLessEqual"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertLessEqual</span></code></a></p></td>
+<td><p>Just like self.assertTrue(a &lt;= b), but with a nicer default message.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertListEqual" title="multiplication.multiply_test.TestMultiply.assertListEqual"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertListEqual</span></code></a></p></td>
+<td><p>A list-specific equality assertion.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertLogs" title="multiplication.multiply_test.TestMultiply.assertLogs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertLogs</span></code></a></p></td>
+<td><p>Fail unless a log message of level <em>level</em> or higher is emitted on <em>logger_name</em> or its children.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertMultiLineEqual" title="multiplication.multiply_test.TestMultiply.assertMultiLineEqual"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertMultiLineEqual</span></code></a></p></td>
+<td><p>Assert that two multi-line strings are equal.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertNotAlmostEqual" title="multiplication.multiply_test.TestMultiply.assertNotAlmostEqual"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertNotAlmostEqual</span></code></a></p></td>
+<td><p>Fail if the two objects are equal as determined by their difference rounded to the given number of decimal places (default 7) and comparing to zero, or by comparing that the difference between the two objects is less than the given delta.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertNotAlmostEquals</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertNotEqual" title="multiplication.multiply_test.TestMultiply.assertNotEqual"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertNotEqual</span></code></a></p></td>
+<td><p>Fail if the two objects are equal as determined by the ‘!=’ operator.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertNotEquals</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertNotIn" title="multiplication.multiply_test.TestMultiply.assertNotIn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertNotIn</span></code></a></p></td>
+<td><p>Just like self.assertTrue(a not in b), but with a nicer default message.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertNotIsInstance" title="multiplication.multiply_test.TestMultiply.assertNotIsInstance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertNotIsInstance</span></code></a></p></td>
+<td><p>Included for symmetry with assertIsInstance.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertNotRegex" title="multiplication.multiply_test.TestMultiply.assertNotRegex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertNotRegex</span></code></a></p></td>
+<td><p>Fail the test if the text matches the regular expression.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertNotRegexpMatches</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertRaises" title="multiplication.multiply_test.TestMultiply.assertRaises"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertRaises</span></code></a></p></td>
+<td><p>Fail unless an exception of class expected_exception is raised by the callable when invoked with specified positional and keyword arguments.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertRaisesRegex" title="multiplication.multiply_test.TestMultiply.assertRaisesRegex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertRaisesRegex</span></code></a></p></td>
+<td><p>Asserts that the message in a raised exception matches a regex.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertRaisesRegexp</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertRegex" title="multiplication.multiply_test.TestMultiply.assertRegex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertRegex</span></code></a></p></td>
+<td><p>Fail the test unless the text matches the regular expression.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertRegexpMatches</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertSequenceEqual" title="multiplication.multiply_test.TestMultiply.assertSequenceEqual"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertSequenceEqual</span></code></a></p></td>
+<td><p>An equality assertion for ordered sequences (like lists and tuples).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertSetEqual" title="multiplication.multiply_test.TestMultiply.assertSetEqual"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertSetEqual</span></code></a></p></td>
+<td><p>A set-specific equality assertion.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertTrue" title="multiplication.multiply_test.TestMultiply.assertTrue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertTrue</span></code></a></p></td>
+<td><p>Check that the expression is true.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertTupleEqual" title="multiplication.multiply_test.TestMultiply.assertTupleEqual"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertTupleEqual</span></code></a></p></td>
+<td><p>A tuple-specific equality assertion.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertWarns" title="multiplication.multiply_test.TestMultiply.assertWarns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertWarns</span></code></a></p></td>
+<td><p>Fail unless a warning of class warnClass is triggered by the callable when invoked with specified positional and keyword arguments.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.assertWarnsRegex" title="multiplication.multiply_test.TestMultiply.assertWarnsRegex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertWarnsRegex</span></code></a></p></td>
+<td><p>Asserts that the message in a triggered warning matches a regexp.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">assert_</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">countTestCases</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.debug" title="multiplication.multiply_test.TestMultiply.debug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">debug</span></code></a></p></td>
+<td><p>Run the test without collecting errors in a TestResult</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">defaultTestResult</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.doClassCleanups" title="multiplication.multiply_test.TestMultiply.doClassCleanups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">doClassCleanups</span></code></a></p></td>
+<td><p>Execute all class cleanup functions.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.doCleanups" title="multiplication.multiply_test.TestMultiply.doCleanups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">doCleanups</span></code></a></p></td>
+<td><p>Execute all cleanup functions.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.fail" title="multiplication.multiply_test.TestMultiply.fail"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fail</span></code></a></p></td>
+<td><p>Fail immediately, with the given message.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">failIf</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">failIfAlmostEqual</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">failIfEqual</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">failUnless</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">failUnlessAlmostEqual</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">failUnlessEqual</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">failUnlessRaises</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">id</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.setUp" title="multiplication.multiply_test.TestMultiply.setUp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setUp</span></code></a></p></td>
+<td><p>Hook method for setting up the test fixture before exercising it.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.setUpClass" title="multiplication.multiply_test.TestMultiply.setUpClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setUpClass</span></code></a></p></td>
+<td><p>Hook method for setting up class fixture before running tests in the class.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.shortDescription" title="multiplication.multiply_test.TestMultiply.shortDescription"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shortDescription</span></code></a></p></td>
+<td><p>Returns a one-line description of the test, or None if no description has been provided.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.skipTest" title="multiplication.multiply_test.TestMultiply.skipTest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">skipTest</span></code></a></p></td>
+<td><p>Skip this test.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.subTest" title="multiplication.multiply_test.TestMultiply.subTest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subTest</span></code></a></p></td>
+<td><p>Return a context manager that will return the enclosed block of code in a subtest identified by the optional message and keyword parameters.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.tearDown" title="multiplication.multiply_test.TestMultiply.tearDown"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tearDown</span></code></a></p></td>
+<td><p>Hook method for deconstructing the test fixture after testing it.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.tearDownClass" title="multiplication.multiply_test.TestMultiply.tearDownClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tearDownClass</span></code></a></p></td>
+<td><p>Hook method for deconstructing the class fixture after running all tests in the class.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#multiplication.multiply_test.TestMultiply.test_successful_multiply_2" title="multiplication.multiply_test.TestMultiply.test_successful_multiply_2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_successful_multiply_2</span></code></a></p></td>
+<td><p>Check if returns the 2 times of input integer</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">longMessage</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">maxDiff</span></code></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.__call__">
+<code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.addClassCleanup">
+<em class="property">classmethod </em><code class="sig-name descname">addClassCleanup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">function</span></em>, <em class="sig-param"><span class="o">/</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.addClassCleanup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as addCleanup, except the cleanup items are called even if
+setUpClass fails (unlike tearDownClass).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.addCleanup">
+<code class="sig-name descname">addCleanup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">function</span></em>, <em class="sig-param"><span class="o">/</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.addCleanup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a function, with arguments, to be called when the test is
+completed. Functions added are called on a LIFO basis and are
+called after tearDown on test failure or success.</p>
+<p>Cleanup items are called even if setUp fails (unlike tearDown).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.addTypeEqualityFunc">
+<code class="sig-name descname">addTypeEqualityFunc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">typeobj</span></em>, <em class="sig-param"><span class="n">function</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.addTypeEqualityFunc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a type specific assertEqual style function to compare a type.</p>
+<p>This method is for use by TestCase subclasses that need to register
+their own type equality functions to provide nicer error messages.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>typeobj: The data type to call this function on when both values</dt><dd><p>are of the same type in assertEqual().</p>
+</dd>
+<dt>function: The callable taking two arguments and an optional</dt><dd><p>msg= argument that raises self.failureException with a
+useful error message when the two arguments are not equal.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertAlmostEqual">
+<code class="sig-name descname">assertAlmostEqual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">first</span></em>, <em class="sig-param"><span class="n">second</span></em>, <em class="sig-param"><span class="n">places</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delta</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertAlmostEqual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fail if the two objects are unequal as determined by their
+difference rounded to the given number of decimal places
+(default 7) and comparing to zero, or by comparing that the
+difference between the two objects is more than the given
+delta.</p>
+<p>Note that decimal places (from zero) are usually not the same
+as significant digits (measured from the most significant digit).</p>
+<p>If the two objects compare equal then they will automatically
+compare almost equal.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertCountEqual">
+<code class="sig-name descname">assertCountEqual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">first</span></em>, <em class="sig-param"><span class="n">second</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertCountEqual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asserts that two iterables have the same elements, the same number of
+times, without regard to order.</p>
+<blockquote>
+<div><blockquote>
+<div><dl class="simple">
+<dt>self.assertEqual(Counter(list(first)),</dt><dd><p>Counter(list(second)))</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>Example:</dt><dd><ul class="simple">
+<li><p>[0, 1, 1] and [1, 0, 1] compare equal.</p></li>
+<li><p>[0, 0, 1] and [0, 1] compare unequal.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertDictContainsSubset">
+<code class="sig-name descname">assertDictContainsSubset</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">subset</span></em>, <em class="sig-param"><span class="n">dictionary</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertDictContainsSubset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks whether dictionary is a superset of subset.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertEqual">
+<code class="sig-name descname">assertEqual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">first</span></em>, <em class="sig-param"><span class="n">second</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertEqual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fail if the two objects are unequal as determined by the ‘==’
+operator.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertFalse">
+<code class="sig-name descname">assertFalse</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">expr</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertFalse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check that the expression is false.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertGreater">
+<code class="sig-name descname">assertGreater</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">a</span></em>, <em class="sig-param"><span class="n">b</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertGreater" title="Permalink to this definition">¶</a></dt>
+<dd><p>Just like self.assertTrue(a &gt; b), but with a nicer default message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertGreaterEqual">
+<code class="sig-name descname">assertGreaterEqual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">a</span></em>, <em class="sig-param"><span class="n">b</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertGreaterEqual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Just like self.assertTrue(a &gt;= b), but with a nicer default message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertIn">
+<code class="sig-name descname">assertIn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">member</span></em>, <em class="sig-param"><span class="n">container</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertIn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Just like self.assertTrue(a in b), but with a nicer default message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertIs">
+<code class="sig-name descname">assertIs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">expr1</span></em>, <em class="sig-param"><span class="n">expr2</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertIs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Just like self.assertTrue(a is b), but with a nicer default message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertIsInstance">
+<code class="sig-name descname">assertIsInstance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span></em>, <em class="sig-param"><span class="n">cls</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertIsInstance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as self.assertTrue(isinstance(obj, cls)), with a nicer
+default message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertIsNone">
+<code class="sig-name descname">assertIsNone</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertIsNone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as self.assertTrue(obj is None), with a nicer default message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertIsNot">
+<code class="sig-name descname">assertIsNot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">expr1</span></em>, <em class="sig-param"><span class="n">expr2</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertIsNot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Just like self.assertTrue(a is not b), but with a nicer default message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertIsNotNone">
+<code class="sig-name descname">assertIsNotNone</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertIsNotNone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Included for symmetry with assertIsNone.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertLess">
+<code class="sig-name descname">assertLess</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">a</span></em>, <em class="sig-param"><span class="n">b</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertLess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Just like self.assertTrue(a &lt; b), but with a nicer default message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertLessEqual">
+<code class="sig-name descname">assertLessEqual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">a</span></em>, <em class="sig-param"><span class="n">b</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertLessEqual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Just like self.assertTrue(a &lt;= b), but with a nicer default message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertListEqual">
+<code class="sig-name descname">assertListEqual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">list1</span></em>, <em class="sig-param"><span class="n">list2</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertListEqual" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list-specific equality assertion.</p>
+<dl>
+<dt>Args:</dt><dd><p>list1: The first list to compare.
+list2: The second list to compare.
+msg: Optional message to use on failure instead of a list of</p>
+<blockquote>
+<div><p>differences.</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertLogs">
+<code class="sig-name descname">assertLogs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">logger</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">level</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertLogs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fail unless a log message of level <em>level</em> or higher is emitted
+on <em>logger_name</em> or its children.  If omitted, <em>level</em> defaults to
+INFO and <em>logger</em> defaults to the root logger.</p>
+<p>This method must be used as a context manager, and will yield
+a recording object with two attributes: <cite>output</cite> and <cite>records</cite>.
+At the end of the context manager, the <cite>output</cite> attribute will
+be a list of the matching formatted log messages and the
+<cite>records</cite> attribute will be a list of the corresponding LogRecord
+objects.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">assertLogs</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;INFO&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">cm</span><span class="p">:</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;first message&#39;</span><span class="p">)</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;foo.bar&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;second message&#39;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">cm</span><span class="o">.</span><span class="n">output</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;INFO:foo:first message&#39;</span><span class="p">,</span>
+                             <span class="s1">&#39;ERROR:foo.bar:second message&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertMultiLineEqual">
+<code class="sig-name descname">assertMultiLineEqual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">first</span></em>, <em class="sig-param"><span class="n">second</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertMultiLineEqual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assert that two multi-line strings are equal.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertNotAlmostEqual">
+<code class="sig-name descname">assertNotAlmostEqual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">first</span></em>, <em class="sig-param"><span class="n">second</span></em>, <em class="sig-param"><span class="n">places</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delta</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertNotAlmostEqual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fail if the two objects are equal as determined by their
+difference rounded to the given number of decimal places
+(default 7) and comparing to zero, or by comparing that the
+difference between the two objects is less than the given delta.</p>
+<p>Note that decimal places (from zero) are usually not the same
+as significant digits (measured from the most significant digit).</p>
+<p>Objects that are equal automatically fail.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertNotEqual">
+<code class="sig-name descname">assertNotEqual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">first</span></em>, <em class="sig-param"><span class="n">second</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertNotEqual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fail if the two objects are equal as determined by the ‘!=’
+operator.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertNotIn">
+<code class="sig-name descname">assertNotIn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">member</span></em>, <em class="sig-param"><span class="n">container</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertNotIn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Just like self.assertTrue(a not in b), but with a nicer default message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertNotIsInstance">
+<code class="sig-name descname">assertNotIsInstance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span></em>, <em class="sig-param"><span class="n">cls</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertNotIsInstance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Included for symmetry with assertIsInstance.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertNotRegex">
+<code class="sig-name descname">assertNotRegex</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em>, <em class="sig-param"><span class="n">unexpected_regex</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertNotRegex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fail the test if the text matches the regular expression.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertRaises">
+<code class="sig-name descname">assertRaises</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">expected_exception</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertRaises" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fail unless an exception of class expected_exception is raised
+by the callable when invoked with specified positional and
+keyword arguments. If a different type of exception is
+raised, it will not be caught, and the test case will be
+deemed to have suffered an error, exactly as for an
+unexpected exception.</p>
+<p>If called with the callable and arguments omitted, will return a
+context object used like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="n">SomeException</span><span class="p">):</span>
+    <span class="n">do_something</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>An optional keyword argument ‘msg’ can be provided when assertRaises
+is used as a context object.</p>
+<p>The context manager keeps a reference to the exception as
+the ‘exception’ attribute. This allows you to inspect the
+exception after the assertion:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="n">SomeException</span><span class="p">)</span> <span class="k">as</span> <span class="n">cm</span><span class="p">:</span>
+    <span class="n">do_something</span><span class="p">()</span>
+<span class="n">the_exception</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">exception</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">the_exception</span><span class="o">.</span><span class="n">error_code</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertRaisesRegex">
+<code class="sig-name descname">assertRaisesRegex</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">expected_exception</span></em>, <em class="sig-param"><span class="n">expected_regex</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertRaisesRegex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asserts that the message in a raised exception matches a regex.</p>
+<dl>
+<dt>Args:</dt><dd><p>expected_exception: Exception class expected to be raised.
+expected_regex: Regex (re.Pattern object or string) expected</p>
+<blockquote>
+<div><p>to be found in error message.</p>
+</div></blockquote>
+<p>args: Function to be called and extra positional args.
+kwargs: Extra kwargs.
+msg: Optional message used in case of failure. Can only be used</p>
+<blockquote>
+<div><p>when assertRaisesRegex is used as a context manager.</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertRegex">
+<code class="sig-name descname">assertRegex</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em>, <em class="sig-param"><span class="n">expected_regex</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertRegex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fail the test unless the text matches the regular expression.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertSequenceEqual">
+<code class="sig-name descname">assertSequenceEqual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">seq1</span></em>, <em class="sig-param"><span class="n">seq2</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">seq_type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertSequenceEqual" title="Permalink to this definition">¶</a></dt>
+<dd><p>An equality assertion for ordered sequences (like lists and tuples).</p>
+<p>For the purposes of this function, a valid ordered sequence type is one
+which can be indexed, has a length, and has an equality operator.</p>
+<dl>
+<dt>Args:</dt><dd><p>seq1: The first sequence to compare.
+seq2: The second sequence to compare.
+seq_type: The expected datatype of the sequences, or None if no</p>
+<blockquote>
+<div><p>datatype should be enforced.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>msg: Optional message to use on failure instead of a list of</dt><dd><p>differences.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertSetEqual">
+<code class="sig-name descname">assertSetEqual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">set1</span></em>, <em class="sig-param"><span class="n">set2</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertSetEqual" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set-specific equality assertion.</p>
+<dl>
+<dt>Args:</dt><dd><p>set1: The first set to compare.
+set2: The second set to compare.
+msg: Optional message to use on failure instead of a list of</p>
+<blockquote>
+<div><p>differences.</p>
+</div></blockquote>
+</dd>
+</dl>
+<p>assertSetEqual uses ducktyping to support different types of sets, and
+is optimized for sets specifically (parameters must support a
+difference method).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertTrue">
+<code class="sig-name descname">assertTrue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">expr</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertTrue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check that the expression is true.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertTupleEqual">
+<code class="sig-name descname">assertTupleEqual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tuple1</span></em>, <em class="sig-param"><span class="n">tuple2</span></em>, <em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertTupleEqual" title="Permalink to this definition">¶</a></dt>
+<dd><p>A tuple-specific equality assertion.</p>
+<dl>
+<dt>Args:</dt><dd><p>tuple1: The first tuple to compare.
+tuple2: The second tuple to compare.
+msg: Optional message to use on failure instead of a list of</p>
+<blockquote>
+<div><p>differences.</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertWarns">
+<code class="sig-name descname">assertWarns</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">expected_warning</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertWarns" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fail unless a warning of class warnClass is triggered
+by the callable when invoked with specified positional and
+keyword arguments.  If a different type of warning is
+triggered, it will not be handled: depending on the other
+warning filtering rules in effect, it might be silenced, printed
+out, or raised as an exception.</p>
+<p>If called with the callable and arguments omitted, will return a
+context object used like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">assertWarns</span><span class="p">(</span><span class="n">SomeWarning</span><span class="p">):</span>
+    <span class="n">do_something</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>An optional keyword argument ‘msg’ can be provided when assertWarns
+is used as a context object.</p>
+<p>The context manager keeps a reference to the first matching
+warning as the ‘warning’ attribute; similarly, the ‘filename’
+and ‘lineno’ attributes give you information about the line
+of Python code from which the warning was triggered.
+This allows you to inspect the warning after the assertion:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">assertWarns</span><span class="p">(</span><span class="n">SomeWarning</span><span class="p">)</span> <span class="k">as</span> <span class="n">cm</span><span class="p">:</span>
+    <span class="n">do_something</span><span class="p">()</span>
+<span class="n">the_warning</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">warning</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">the_warning</span><span class="o">.</span><span class="n">some_attribute</span><span class="p">,</span> <span class="mi">147</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.assertWarnsRegex">
+<code class="sig-name descname">assertWarnsRegex</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">expected_warning</span></em>, <em class="sig-param"><span class="n">expected_regex</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.assertWarnsRegex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asserts that the message in a triggered warning matches a regexp.
+Basic functioning is similar to assertWarns() with the addition
+that only warnings whose messages also match the regular expression
+are considered successful matches.</p>
+<dl>
+<dt>Args:</dt><dd><p>expected_warning: Warning class expected to be triggered.
+expected_regex: Regex (re.Pattern object or string) expected</p>
+<blockquote>
+<div><p>to be found in error message.</p>
+</div></blockquote>
+<p>args: Function to be called and extra positional args.
+kwargs: Extra kwargs.
+msg: Optional message used in case of failure. Can only be used</p>
+<blockquote>
+<div><p>when assertWarnsRegex is used as a context manager.</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.debug">
+<code class="sig-name descname">debug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the test without collecting errors in a TestResult</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.doClassCleanups">
+<em class="property">classmethod </em><code class="sig-name descname">doClassCleanups</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.doClassCleanups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute all class cleanup functions. Normally called for you after
+tearDownClass.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.doCleanups">
+<code class="sig-name descname">doCleanups</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.doCleanups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute all cleanup functions. Normally called for you after
+tearDown.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.fail">
+<code class="sig-name descname">fail</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.fail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fail immediately, with the given message.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="multiplication.multiply_test.TestMultiply.failureException">
+<code class="sig-name descname">failureException</code><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.failureException" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">AssertionError</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.setUp">
+<code class="sig-name descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.setUpClass">
+<em class="property">classmethod </em><code class="sig-name descname">setUpClass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.setUpClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up class fixture before running tests in the class.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.shortDescription">
+<code class="sig-name descname">shortDescription</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.shortDescription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a one-line description of the test, or None if no
+description has been provided.</p>
+<p>The default implementation of this method returns the first line of
+the specified test method’s docstring.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.skipTest">
+<code class="sig-name descname">skipTest</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">reason</span></em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.skipTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skip this test.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.subTest">
+<code class="sig-name descname">subTest</code><span class="sig-paren">(</span><em class="sig-param">msg=&lt;object object&gt;</em>, <em class="sig-param">**params</em><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.subTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a context manager that will return the enclosed block
+of code in a subtest identified by the optional message and
+keyword parameters.  A failure in the subtest marks the test
+case as failed but resumes execution at the end of the enclosed
+block, allowing further test code to be executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.tearDown">
+<code class="sig-name descname">tearDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.tearDown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.tearDownClass">
+<em class="property">classmethod </em><code class="sig-name descname">tearDownClass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.tearDownClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for deconstructing the class fixture after running all tests in the class.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="multiplication.multiply_test.TestMultiply.test_successful_multiply_2">
+<code class="sig-name descname">test_successful_multiply_2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multiplication.multiply_test.TestMultiply.test_successful_multiply_2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if returns the 2 times of input integer</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Sphinx Docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">Host reStructured Text Sphinx docs on GitHub Pages</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fibonacci.html">fibonacci</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="multiplication.html">multiplication</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="multiplication.multiply.html">multiplication.multiply</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multiplication.multiply_again.html">multiplication.multiply_again</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="multiplication.multiply_test.html">multiplication.multiply_test</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">multiplication.multiply_test.TestMultiply</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mytoolbox.html">mytoolbox</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="multiplication.html">multiplication</a><ul>
+  <li><a href="multiplication.multiply_test.html">multiplication.multiply_test</a><ul>
+      <li>Previous: <a href="multiplication.multiply_test.html" title="previous chapter">multiplication.multiply_test</a></li>
+      <li>Next: <a href="mytoolbox.html" title="next chapter">mytoolbox</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, dMLT.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/_autosummary/multiplication.multiply_test.TestMultiply.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,6 @@
+multiplication.multiply.multiply\_2
+===================================
+
+.. currentmodule:: multiplication.multiply
+
+.. autofunction:: multiply_2

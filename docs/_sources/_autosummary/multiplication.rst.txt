@@ -1,0 +1,32 @@
+﻿multiplication
+==============
+
+.. automodule:: multiplication
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. autosummary::
+   :toctree:
+   :template: module.rst
+   :recursive:
+
+   multiplication.multiply
+   multiplication.multiply_again
+   multiplication.multiply_test
+

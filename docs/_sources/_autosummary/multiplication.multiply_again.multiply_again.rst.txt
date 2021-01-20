@@ -1,0 +1,6 @@
+multiplication.multiply\_again.multiply\_again
+==============================================
+
+.. currentmodule:: multiplication.multiply_again
+
+.. autofunction:: multiply_again
