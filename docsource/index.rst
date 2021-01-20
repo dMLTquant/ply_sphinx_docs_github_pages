@@ -3,18 +3,37 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to ply_sphinx_docs_github_pages's documentation!
-========================================================
+######################################################
+Welcome to `_project_` docs!
+######################################################
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-
-
+******************************************************
 Indices and tables
-==================
+******************************************************
 
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+
+******************************************************
+Guide
+******************************************************
+
+.. toctree::
+   
+   README
+
+******************************************************
+API Reference
+******************************************************
+
+.. autosummary::
+   :toctree: _autosummary
+   :caption: API Reference
+   :template: module.rst
+   :recursive:
+
+   fibonacci
+   multiplication
+   mytoolbox

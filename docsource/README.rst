@@ -93,7 +93,7 @@ Now navigate to `localhost:8000 <http://localhost:8000>`_.
 
 .. warning:: 
     
-    Consider adding the **_build** and **_autosummary** directories to ``.gitignore`` to avoid committing these files to GitHub.
+    Consider adding the **_build** directory to ``.gitignore`` to avoid committing these files to GitHub.
     This folder is only used as a local development/testing environment and will not be used to serve the actual GitHub Pages website.
     This repo contains these files for illustration purpose. 
 
@@ -261,8 +261,6 @@ This will:
 - run ``make html`` to build the documentation into the ``_build`` directory
 - the ``make html`` command is actually saved in the ``./docsource/Makfile``
 - open a new pythong ``http.server`` to show the static files saved in the previous step
-
-To test the new setup you can run ``make live_docs`` from the **root** of the project.
 
 ******************************************************
 References
