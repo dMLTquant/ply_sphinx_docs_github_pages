@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Host reStructured Text Sphinx docs on GitHub Pages &#8212; Sphinx Docs  documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="fibonacci" href="_autosummary/fibonacci.html" />
+    <link rel="prev" title="Welcome to _project_ docs!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="host-restructured-text-sphinx-docs-on-github-pages">
+<h1>Host reStructured Text Sphinx docs on GitHub Pages<a class="headerlink" href="#host-restructured-text-sphinx-docs-on-github-pages" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="step-01-project-folder">
+<h2>Step 01: Project folder<a class="headerlink" href="#step-01-project-folder" title="Permalink to this headline">¶</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The project folder structure is based on the concept that actual source code will be hosted
+inside the repository and therefore in order to achieve separation of concern the documentation
+and all associated workflow is placed in the <strong>docsource</strong> directory while the built site that GitHub Pages
+will serve is saved in the <strong>docs</strong> directory.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project-name
+├── README.rst
+├── .gitignore
+└── docs
+│   └── .gitkeep
+└── docsource
+    └── .gitkeep
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-02-sphinx-quickstart">
+<h2>Step 02: sphinx-quickstart<a class="headerlink" href="#step-02-sphinx-quickstart" title="Permalink to this headline">¶</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>In order to replicate this project the following have been used:
+<code class="docutils literal notranslate"><span class="pre">anaconda</span> <span class="pre">navigator</span> <span class="pre">(v1.10.0)</span></code>,
+<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">(v3.8.5)</span></code>,
+<code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span> <span class="pre">(v3.4.1)</span></code></p>
+</div>
+<p><strong>Spinx</strong> comes with a built-in utility to help start the documentation process: <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/quickstart.html">sphinx-doc.org: Getting Started</a>
+Using <strong>sphinx-quickstart</strong> interactive tool you can quickly generate a complete documentation
+directory and sample Makefile to be used with sphinx-build. More information can be
+found at <a class="reference external" href="https://www.sphinx-doc.org/en/master/man/sphinx-quickstart.html?highlight=sphinx-quickstart">sphinx-doc.org: sphinx-quickstart</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> docsource <span class="o">&amp;&amp;</span> sphinx-quickstart --no-sep
+</pre></div>
+</div>
+<dl class="option-list">
+<dt><kbd><span class="option">--no-sep</span></kbd></dt>
+<dd><p>if specified, create build directory under source directory.</p>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project-name
+├── README.rst
+├── .gitignore
+├── docs
+│   └── .gitkeep
+└── docsource
+    ├── _build
+    │   └── .gitkeep
+    ├── _static
+    │   └── .gitkeep
+    ├── _templates
+    │   └── .gitkeep
+    ├── .gitkeep
+    ├── conf.py
+    ├── index.rst
+    ├── make.bat
+    └── Makefile
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-03-test-if-setup-has-been-successful">
+<h2>Step 03: test if setup has been successful<a class="headerlink" href="#step-03-test-if-setup-has-been-successful" title="Permalink to this headline">¶</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use <strong>python</strong> built-in <strong>http.server</strong> to serve local files. More information on <strong>python http.server</strong>
+can be found here <a class="reference external" href="https://docs.python.org/3/library/http.server.html">docs.python.org: http.server</a></p>
+</div>
+<p><strong>one line command</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make -C ./docsource html <span class="o">&amp;&amp;</span> python3 -m http.server <span class="m">8000</span> --bind <span class="m">127</span>.0.0.1 --directory ./docsource/_build/html
+</pre></div>
+</div>
+<p><strong>or using the step by step approach</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ./docsource
+make html
+<span class="nb">cd</span> ./_build/html
+python3 -m http.server <span class="m">8000</span> --bind <span class="m">127</span>.0.0.1
+</pre></div>
+</div>
+<p>Now navigate to <a class="reference external" href="http://localhost:8000">localhost:8000</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Consider adding the <strong>_build</strong> and <strong>_autosummary</strong> directories to <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> to avoid committing these files to GitHub.
+This folder is only used as a local development/testing environment and will not be used to serve the actual GitHub Pages website.
+This repo contains these files for illustration purpose.</p>
+</div>
+</div>
+<div class="section" id="step-04-add-python-module-package-and-test-setup">
+<h2>Step 04: add python module/package and test setup<a class="headerlink" href="#step-04-add-python-module-package-and-test-setup" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project-name
+├── .gitignore
+├── docs/
+│   └── .gitkeep
+├── docsource/
+│   ├── .gitkeep
+│   ├── _autosummary/           # sphinx `autosummary` extension generated directory/content
+│   ├── _build/
+│   │   ├── doctrees/           # sphinx generated directory/content during the `make html` command
+│   │   └── html/               # sphinx generated directory/content during the `make html` command
+│   ├── _static/
+│   │   └── .gitkeep
+│   ├── _templates/             # templates needed by `autosummary` and `autodocs`
+│   │   ├── .gitkeep
+│   │   ├── class.rst
+│   │   └── module.rst
+│   ├── conf.py
+│   ├── index.rst
+│   ├── make.bat
+│   └── Makefile
+├── fibonacci/                  # example python module/package
+│   ├── .DS_Store
+│   ├── __init__.py
+│   ├── approx_fib.py
+│   └── approx_fib_test.py
+├── Makefile
+├── multiplication/             # example python module/package
+│   ├── .DS_Store
+│   ├── __init__.py
+│   ├── multiply.py
+│   ├── multiply_again.py
+│   └── multiply_test.py
+├── mytoolbox/                  # example python module/package (by JamesALeedham/Sphinx-Autosummary-Recursion)
+│   ├── .DS_Store
+│   ├── __init__.py
+│   ├── mymodule1.py
+│   ├── mymodule2.py
+│   └── mysubpackage/
+│       ├── __init__.py
+│       ├── mymodule3.py
+│       └── mysubsubpackage/
+│           ├── __init__.py
+│           └── mymodule4.py
+└── README.rst
+</pre></div>
+</div>
+<div class="section" id="add-autodoc-and-autosummary-extensions">
+<h3>04.01 add <code class="docutils literal notranslate"><span class="pre">autodoc</span></code> and <code class="docutils literal notranslate"><span class="pre">autosummary</span></code> extensions<a class="headerlink" href="#add-autodoc-and-autosummary-extensions" title="Permalink to this headline">¶</a></h3>
+<p>Add the built-in sphinx extensions: <strong>autodoc</strong> and <strong>autosummary</strong> by replacing:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- General configuration ---------------------------------------------------</span>
+
+<span class="c1"># Add any Sphinx extension module names here, as strings. They can be</span>
+<span class="c1"># extensions coming with Sphinx (named &#39;sphinx.ext.*&#39;) or your custom</span>
+<span class="c1"># ones.</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>to:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- General configuration ---------------------------------------------------</span>
+
+<span class="c1"># Add any Sphinx extension module names here, as strings. They can be</span>
+<span class="c1"># extensions coming with Sphinx (named &#39;sphinx.ext.*&#39;) or your custom</span>
+<span class="c1"># ones.</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;sphinx.ext.autodoc&#39;</span><span class="p">,</span>  <span class="c1"># Core Sphinx library for auto html doc generation from docstrings</span>
+    <span class="s1">&#39;sphinx.ext.autosummary&#39;</span><span class="p">,</span>  <span class="c1"># Create neat summary tables for modules/classes/methods etc</span>
+<span class="p">]</span>
+<span class="c1"># Turn on sphinx.ext.autosummary</span>
+<span class="n">autosummary_generate</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="turn-on-sys-path">
+<h3>04.02 turn on <code class="docutils literal notranslate"><span class="pre">sys.path</span></code><a class="headerlink" href="#turn-on-sys-path" title="Permalink to this headline">¶</a></h3>
+<p>From <cite>conf.py</cite> uncomment the following code to allow <code class="docutils literal notranslate"><span class="pre">sphinx</span></code> to look in the correct directory
+where the pythong packages have been saved:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">))</span>
+<span class="c1"># the `..` will move up one directory</span>
+<span class="c1"># make sure you are pointing it to the correct relative/absolute path</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-autosummary-templates">
+<h3>04.03 create <code class="docutils literal notranslate"><span class="pre">autosummary</span></code> templates<a class="headerlink" href="#create-autosummary-templates" title="Permalink to this headline">¶</a></h3>
+<p>Sphinx <a class="reference external" href="https://www.sphinx-doc.org/en/1.6/ext/autosummary.html">sphinx-doc.org: autosummary</a> uses Jinja stub page templates files to generate the documentation:</p>
+<ul class="simple">
+<li><p>autosummary/base.rst – fallback template</p></li>
+<li><p>autosummary/module.rst – template for modules</p></li>
+<li><p>autosummary/class.rst – template for classes</p></li>
+<li><p>autosummary/function.rst – template for functions</p></li>
+<li><p>autosummary/attribute.rst – template for class attributes</p></li>
+<li><p>autosummary/method.rst – template for class methods</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project-name
+├── docsource/
+│   ├── _templates/             # templates needed by `autosummary` and `autodocs`
+│   │   ├── class.rst
+│   │   └── module.rst
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-the-autosummary-directive">
+<h3>04.05 add the <code class="docutils literal notranslate"><span class="pre">autosummary</span></code> directive<a class="headerlink" href="#add-the-autosummary-directive" title="Permalink to this headline">¶</a></h3>
+<p>This has been added to the <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> page but can be added to any other page.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">autosummary</span><span class="p">::</span>
+<span class="p">:</span><span class="n">toctree</span><span class="p">:</span> <span class="n">_autosummary</span>
+<span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">API</span> <span class="n">Reference</span>
+<span class="p">:</span><span class="n">template</span><span class="p">:</span> <span class="n">module</span><span class="o">.</span><span class="n">rst</span>
+<span class="p">:</span><span class="n">recursive</span><span class="p">:</span>
+
+<span class="n">fibonacci</span>
+<span class="n">multiplication</span>
+<span class="n">mytoolbox</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="modify-the-make-file-and-remove-built-cache">
+<h3>04.05 modify the <cite>make</cite> file and remove built cache<a class="headerlink" href="#modify-the-make-file-and-remove-built-cache" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>%: Makefile
+    rm -rf _build               <span class="c1"># remove _build folder cache during the local build test process</span>
+    rm -rf _autosummary         <span class="c1"># remove _autosummary folder cache during the local build test process</span>
+    @<span class="k">$(</span>SPHINXBUILD<span class="k">)</span> -M <span class="nv">$@</span> <span class="s2">&quot;</span><span class="k">$(</span>SOURCEDIR<span class="k">)</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="k">$(</span>BUILDDIR<span class="k">)</span><span class="s2">&quot;</span> <span class="k">$(</span>SPHINXOPTS<span class="k">)</span> <span class="k">$(</span>O<span class="k">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="locally-build-the-docs-and-preview">
+<h3>04.06 locally build the docs and preview<a class="headerlink" href="#locally-build-the-docs-and-preview" title="Permalink to this headline">¶</a></h3>
+<p>Using <strong>python</strong> built-in <code class="docutils literal notranslate"><span class="pre">http.server</span></code> module create a new <strong>make</strong> file in the <strong>root</strong> of the project and add the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># using the makefile inside the docs folder</span>
+<span class="c1"># clean the current build then</span>
+<span class="c1"># test build docs in local environment and</span>
+<span class="c1"># start python http.server</span>
+live_docs:
+    @cp -a ./README.rst ./docsource/README.rst
+    make -C ./docsource html <span class="o">&amp;&amp;</span> python3 -m http.server <span class="m">8000</span> --bind <span class="m">127</span>.0.0.1 --directory ./docsource/_build/html
+</pre></div>
+</div>
+<p>This will:</p>
+<ul class="simple">
+<li><p>copy the latest README.rst file (guide) into the <code class="docutils literal notranslate"><span class="pre">docsource</span></code> directory</p></li>
+<li><p>run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> to build the documentation into the <code class="docutils literal notranslate"><span class="pre">_build</span></code> directory</p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> command is actually saved in the <code class="docutils literal notranslate"><span class="pre">./docsource/Makfile</span></code></p></li>
+<li><p>open a new pythong <code class="docutils literal notranslate"><span class="pre">http.server</span></code> to show the static files saved in the previous step</p></li>
+</ul>
+<p>To test the new setup you can run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">live_docs</span></code> from the <strong>root</strong> of the project.</p>
+</div>
+</div>
+<div class="section" id="step-05-host-static-website-on-github-pages">
+<h2>Step 05: host static website on GitHub Pages<a class="headerlink" href="#step-05-host-static-website-on-github-pages" title="Permalink to this headline">¶</a></h2>
+<p>Add the following to the <strong>root Makefile</strong> and run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">github_docs</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>github_docs:
+    rm -rf docs
+    @cp -a ./README.rst ./docsource/README.rst
+    @make -C ./docsource html
+    @cp -a ./docsource/_build/html/. ./docs
+</pre></div>
+</div>
+<p>This will:</p>
+<ul class="simple">
+<li><p>remove docs folder cache that might have been previously built to allow for a fresh version</p></li>
+<li><p>copy the latest README.rst file (guide) into the <code class="docutils literal notranslate"><span class="pre">docsource</span></code> directory</p></li>
+<li><p>run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> to build the documentation into the <code class="docutils literal notranslate"><span class="pre">_build</span></code> directory</p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> command is actually saved in the <code class="docutils literal notranslate"><span class="pre">./docsource/Makfile</span></code></p></li>
+<li><p>copy the newly built <code class="docutils literal notranslate"><span class="pre">_build</span></code> static files into <code class="docutils literal notranslate"><span class="pre">docs</span></code> required by GitHub Pages</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>After the repository and the <strong>docs</strong> directory have been committed to GitHub go to the repository
+settings and select it as the <strong>Source</strong> for GitHub Pages.</p>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p>This project has been made possible by using/reading:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/JamesALeedham/Sphinx-Autosummary-Recursion">github.com: JamesALeedham/Sphinx-Autosummary-Recursion</a></p></li>
+<li><p><a class="reference external" href="https://www.docslikecode.com/articles/github-pages-python-sphinx/">docslikecode.com: Yes You Can Use GitHub Pages with Python Sphinx</a></p></li>
+<li><p><a class="reference external" href="https://github.com/annegentle/create-demo">github.com: annegentle/create-demo</a></p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Sphinx Docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Host reStructured Text Sphinx docs on GitHub Pages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#step-01-project-folder">Step 01: Project folder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-02-sphinx-quickstart">Step 02: sphinx-quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-03-test-if-setup-has-been-successful">Step 03: test if setup has been successful</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-04-add-python-module-package-and-test-setup">Step 04: add python module/package and test setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#add-autodoc-and-autosummary-extensions">04.01 add <code class="docutils literal notranslate"><span class="pre">autodoc</span></code> and <code class="docutils literal notranslate"><span class="pre">autosummary</span></code> extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turn-on-sys-path">04.02 turn on <code class="docutils literal notranslate"><span class="pre">sys.path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-autosummary-templates">04.03 create <code class="docutils literal notranslate"><span class="pre">autosummary</span></code> templates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-the-autosummary-directive">04.05 add the <code class="docutils literal notranslate"><span class="pre">autosummary</span></code> directive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modify-the-make-file-and-remove-built-cache">04.05 modify the <cite>make</cite> file and remove built cache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#locally-build-the-docs-and-preview">04.06 locally build the docs and preview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#step-05-host-static-website-on-github-pages">Step 05: host static website on GitHub Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="_autosummary/fibonacci.html">fibonacci</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_autosummary/multiplication.html">multiplication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_autosummary/mytoolbox.html">mytoolbox</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to <cite>_project_</cite> docs!</a></li>
+      <li>Next: <a href="_autosummary/fibonacci.html" title="next chapter">fibonacci</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, dMLT.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/README.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

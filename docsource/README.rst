@@ -93,7 +93,7 @@ Now navigate to `localhost:8000 <http://localhost:8000>`_.
 
 .. warning:: 
     
-    Consider adding the **_build** directory to ``.gitignore`` to avoid committing these files to GitHub.
+    Consider adding the **_build** and **_autosummary** directories to ``.gitignore`` to avoid committing these files to GitHub.
     This folder is only used as a local development/testing environment and will not be used to serve the actual GitHub Pages website.
     This repo contains these files for illustration purpose. 
 
@@ -261,6 +261,35 @@ This will:
 - run ``make html`` to build the documentation into the ``_build`` directory
 - the ``make html`` command is actually saved in the ``./docsource/Makfile``
 - open a new pythong ``http.server`` to show the static files saved in the previous step
+
+To test the new setup you can run ``make live_docs`` from the **root** of the project.
+
+******************************************************
+Step 05: host static website on GitHub Pages
+******************************************************
+
+Add the following to the **root Makefile** and run ``make github_docs``:
+
+.. code:: bash
+
+    github_docs:
+        rm -rf docs
+        @cp -a ./README.rst ./docsource/README.rst
+        @make -C ./docsource html
+        @cp -a ./docsource/_build/html/. ./docs 
+
+This will:
+
+- remove docs folder cache that might have been previously built to allow for a fresh version 
+- copy the latest README.rst file (guide) into the ``docsource`` directory
+- run ``make html`` to build the documentation into the ``_build`` directory
+- the ``make html`` command is actually saved in the ``./docsource/Makfile``
+- copy the newly built ``_build`` static files into ``docs`` required by GitHub Pages
+
+.. important:: 
+
+    After the repository and the **docs** directory have been committed to GitHub go to the repository
+    settings and select it as the **Source** for GitHub Pages. 
 
 ******************************************************
 References
