@@ -1,0 +1,30 @@
+name: gh-pages publisher 🚀
+
+on:
+push:
+  branches: [master]
+pull_request:
+  branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8.5
+        uses: actions/setup-python@v2
+        with:
+          # Semantic version range syntax or exact version of a Python version
+          python-version: "3.8.5"
+          # Optional - x64 or x86 architecture, defaults to x64
+          architecture: "x64"
+      # You can test your matrix by printing the current Python version
+      - name: Install pipx
+        run: python3 -m pip install --user pipx==0.16.0.0 && python3 -m pipx ensurepath
+      - name: Install poetry
+        run: pipx install poetry==1.1.0
+      - name: Test install
+        run: python3 --version ; pip --version ; pipx --version ; poetry --version
+      - name: Build website
+        run: make github_docs
