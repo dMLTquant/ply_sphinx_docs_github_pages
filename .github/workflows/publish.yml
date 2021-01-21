@@ -23,7 +23,7 @@ jobs:
       - name: Install pipx
         run: python3 -m pip install --user pipx==0.16.0.0 && python3 -m pipx ensurepath && /home/runner/.local/bin/pipx ensurepath
       - name: Install poetry
-        run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+        run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python - && source $HOME/.poetry/env
       - name: Test environment
         run: python3 --version ; pip --version ; pipx --version ; poetry --version
       - name: Build website
