@@ -25,7 +25,7 @@ jobs:
       - name: pipx PATH
         run: /home/runner/.local/bin/pipx ensurepath
       - name: Install poetry
-        run: pipx install poetry==1.1.0
+        run: pipx install poetry==1.1.0 && pipx ensurepath
       - name: Test environment
         run: python3 --version ; pip --version ; pipx --version ; poetry --version
       - name: Build website
