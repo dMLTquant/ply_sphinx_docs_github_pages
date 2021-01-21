@@ -21,12 +21,12 @@ jobs:
           architecture: "x64"
       # You can test your matrix by printing the current Python version
       - name: Install pipx
-        run: python3 -m pip install --user pipx==0.16.0.0 && pipx ensurepath
-      - name: Setup pipx PATH
-        run: PATH=/home/runner/.local/bin:$PATH
+        run: python3 -m pip install --user pipx==0.16.0.0 && python3 -m pipx ensurepath
       - name: Install poetry
         run: pipx install poetry==1.1.0
+        env: PATH=/home/runner/.local/bin:$PATH
       - name: Test environment
         run: python3 --version ; pip --version ; pipx --version ; poetry --version
+        env: PATH=/home/runner/.local/bin:$PATH
       - name: Build website
         run: make github_docs
