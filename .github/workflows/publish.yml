@@ -26,10 +26,10 @@ jobs:
         run: /home/runner/.local/bin/pipx ensurepath
       - name: pipX PATH
         run: PATH=/home/runner/.local/bin:$PATH
-      - name: Check for PIP_* environment variables
-        run: env | grep '^PIP_'
       - name: Install poetry
         run: pipx install poetry==1.1.0
+      - name: pipx ensurepath
+        run: /home/runner/.local/bin/pipx ensurepath
       - name: Test environment
         run: python3 --version ; pip --version ; pipx --version ; poetry --version
       - name: Build website
