@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
       - uses: actions/checkout@v2
@@ -21,9 +21,13 @@ jobs:
           architecture: "x64"
       # You can test your matrix by printing the current Python version
       - name: Install pipx
-        run: python3 -m pip install --user pipx==0.16.0.0 && python3 -m pipx ensurepath && /home/runner/.local/bin/pipx ensurepath
+        run: python3 -m pip install --user pipx==0.16.0.0 && python3 -m pipx ensurepath
+      - name: pipx PATH
+        run: /home/runner/.local/bin/pipx ensurepath
       - name: Install poetry
-        run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python - && source $HOME/.poetry/env
+        run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+      - name: Poetry path
+        run: source $HOME/.poetry/env
       - name: Test environment
         run: python3 --version ; pip --version ; pipx --version ; poetry --version
       - name: Build website
