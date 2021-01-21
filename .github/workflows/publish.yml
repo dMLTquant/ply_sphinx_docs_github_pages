@@ -22,6 +22,7 @@ jobs:
       # You can test your matrix by printing the current Python version
       - name: Install pipx
         run: python3 -m pip install --user pipx==0.16.0.0 && pipx ensurepath
+      - name: Setup pipx PATH
         run: PATH=/home/runner/.local/bin:$PATH
       - name: Install poetry
         run: pipx install poetry==1.1.0
