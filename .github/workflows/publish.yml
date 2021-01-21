@@ -21,9 +21,9 @@ jobs:
           architecture: "x64"
       # You can test your matrix by printing the current Python version
       - name: Install pipx
-        run: python3 -m pip install --user pipx==0.16.0.0 && python3 -m pipx ensurepath
+        run: python3 -m pip install --user pipx==0.16.0.0 && python3 -m pipx ensurepath && /home/runner/.local/bin/pipx ensurepath
       - name: Install poetry
-        run: /home/runner/.local/bin/pipx ensurepath ; pipx install poetry==1.1.0
+        run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
       - name: Test environment
         run: python3 --version ; pip --version ; pipx --version ; poetry --version
       - name: Build website
