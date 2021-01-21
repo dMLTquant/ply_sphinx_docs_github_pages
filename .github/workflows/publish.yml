@@ -31,6 +31,6 @@ jobs:
       - name: pipx ensurepath
         run: /home/runner/.local/bin/pipx ensurepath
       - name: Test environment
-        run: python3 --version ; pip --version ; pipx --version ; poetry --version
+        run: python3 --version ; pip --version ; pipx --version ; /home/runner/.poetry/bin/poetry --version
       - name: Build website
         run: make github_docs
