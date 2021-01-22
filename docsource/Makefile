@@ -5,7 +5,7 @@
 # from the environment for the first two.
 SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
-GITHUBACTION  ?= pipx run poetry run sphinx-build
+GITHUBACTION  ?= pipx run poetry --version
 SOURCEDIR     = .
 BUILDDIR      = _build
 
@@ -26,4 +26,4 @@ help:
 github_docs:
 	rm -rf _build
 	rm -rf _autosummary
-	@$(GITHUBACTION) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(GITHUBACTION) 

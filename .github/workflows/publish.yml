@@ -32,5 +32,7 @@ jobs:
         run: python3 --version ; pip --version ; pipx --version ; pipx run poetry --version ; ls -a
       - name: Install dependencies
         run: pipx run poetry install
+      - name: Test sphinx
+        run: pipx run poetry run sphinx-build
       - name: Build website
         run: make github_action_pre_check ; make github_action_docs
