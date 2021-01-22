@@ -272,12 +272,21 @@ Add the following to the **root Makefile** and run ``make github_docs``:
 
 .. code:: bash
 
+    # manual 
     github_docs:
         rm -rf docs
         mkdir ./docs && touch ./docs/.nojekyll
         @cp -a ./README.rst ./docsource/README.rst
         @make -C ./docsource html
-        @cp -a ./docsource/_build/html/. ./docs 
+        @cp -a ./docsource/_build/html/. ./docs
+
+    # automatic github action push or pull request
+    github_action_docs:
+        rm -rf docs
+        mkdir ./docs && touch ./docs/.nojekyll
+        @cp -a ./README.rst ./docsource/README.rst
+        @make -C ./docsource github_docs html
+        @cp -a ./docsource/_build/html/. ./docs
 
 This will:
 
