@@ -23,15 +23,12 @@ jobs:
       - name: Install pipx
         run: python3 -m pip install --user pipx==0.16.0.0
       - name: pipx ensurepath
-        run: /home/runner/.local/bin/pipx ensurepath
+        run: /home/runner/.local/bin/pipx ensurepathœ
       - name: pipX PATH
         run: PATH=/home/runner/.local/bin:$PATH
       - name: Install poetry
         run: pipx install poetry==1.1.0
-      - name: pipx ensurepath
-        run: PATH=/home/runner/work/ply_sphinx_docs_github_pages/ply_sphinx_docs_github_pages/"/opt/pipx_bin":$PATH
       - name: Test environment
-        # run: python3 --version ; pip --version ; pipx --version ; /home/runner/.poetry/bin/poetry --version
-        run: pipx list && poetry --version
+        run: python3 --version ; pip --version ; pipx --version ; pipx run poetry --version
       - name: Build website
         run: make github_docs
