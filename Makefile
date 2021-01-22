@@ -21,5 +21,7 @@ github_action_docs:
 	@cp -a ./README.rst ./docsource/README.rst
 	rm -rf ./docsource/_build
 	rm -rf ./docsource/_autosummary
-	pipx run poetry run sphinx-build -M html SOURCEDIR="./docsource" BUILDDIR="./docsource/_build"
+	cd ./docsource ; ls -a 
+	pipx run poetry run sphinx-build -M html SOURCEDIR="." BUILDDIR="./_build"
+	cd ..
 	@cp -a ./docsource/_build/html/. ./docs
