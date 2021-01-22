@@ -26,4 +26,4 @@ help:
 github_docs:
 	rm -rf _build
 	rm -rf _autosummary
-	@$(GITHUBACTION) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(GITHUBACTION) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
