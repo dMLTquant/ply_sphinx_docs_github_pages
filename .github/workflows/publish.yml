@@ -30,5 +30,7 @@ jobs:
         run: pipx install poetry==1.1.0
       - name: Test environment
         run: python3 --version ; pip --version ; pipx --version ; pipx run poetry --version
+      - name: Install dependencies
+        run: pipx run poetry install
       - name: Build website
         run: make github_docs
