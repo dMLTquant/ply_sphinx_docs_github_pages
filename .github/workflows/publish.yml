@@ -33,4 +33,4 @@ jobs:
       - name: Install dependencies
         run: pipx run poetry install
       - name: Build website
-        run: make github_action_docs
+        run: make github_action_pre_check ; make github_action_docs
