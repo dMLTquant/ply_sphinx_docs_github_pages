@@ -19,9 +19,9 @@ github_action_docs:
 	rm -rf docs
 	mkdir ./docs && touch ./docs/.nojekyll
 	@cp -a ./README.rst ./docsource/README.rst
-	rm -rf ./docsource/_build
+	rm -rf ./docsource/_build && mkdir ./docsource/_build 
 	rm -rf ./docsource/_autosummary
 	cd ./docsource ; ls -a 
-	pipx run poetry run sphinx-build buildername="html" sourcedir="./" outputdir="./_build"
+	pipx run poetry run sphinx-build -b html SOURCEDIR="." BUILDDIR="./_build"
 	cd ..
 	@cp -a ./docsource/_build/html/. ./docs
