@@ -23,7 +23,7 @@ jobs:
       - name: Install pipx
         run: python3 -m pip install --user pipx==0.16.0.0
       - name: pipx ensurepath
-        run: /home/runner/.local/bin/pipx ensurepathœ
+        run: /home/runner/.local/bin/pipx ensurepath
       - name: pipX PATH
         run: PATH=/home/runner/.local/bin:$PATH
       - name: Install poetry
