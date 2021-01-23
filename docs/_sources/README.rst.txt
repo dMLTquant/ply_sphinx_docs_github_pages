@@ -272,15 +272,28 @@ Add the following to the **root Makefile** and run ``make github_docs``:
 
 .. code:: bash
 
+    # manual 
     github_docs:
         rm -rf docs
+        mkdir ./docs && touch ./docs/.nojekyll
         @cp -a ./README.rst ./docsource/README.rst
         @make -C ./docsource html
-        @cp -a ./docsource/_build/html/. ./docs 
+        @cp -a ./docsource/_build/html/. ./docs
+
+    # automatic github action push or pull request
+    github_action_docs:
+        rm -rf docs
+        mkdir docs && touch docs/.nojekyll
+        @cp -a README.rst docsource/README.rst
+        rm -rf docsource/_build && mkdir docsource/_build 
+        rm -rf docsource/_autosummary
+        pipx run poetry run sphinx-build -b html docsource docsource/_build/html
+        @cp -a docsource/_build/html/* docs
 
 This will:
 
 - remove docs folder cache that might have been previously built to allow for a fresh version 
+- add a ``.nojekyll`` file to `github.blog: Bypassing Jekyll on GitHub Pages <https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/>`_
 - copy the latest README.rst file (guide) into the ``docsource`` directory
 - run ``make html`` to build the documentation into the ``_build`` directory
 - the ``make html`` command is actually saved in the ``./docsource/Makfile``
@@ -290,6 +303,61 @@ This will:
 
     After the repository and the **docs** directory have been committed to GitHub go to the repository
     settings and select it as the **Source** for GitHub Pages. 
+
+******************************************************
+Step 06: github actions to auto build github pages
+******************************************************
+
+.. important:: 
+
+    Use a GitHub Action saved in ``.github/workflows/publish.yml``
+
+.. code:: yml
+
+    name: gh-pages publisher 🚀
+
+    on:
+    push:
+        branches: [master]
+    pull_request:
+        branches: [master]
+
+    jobs:
+    build:
+        runs-on: ubuntu-20.04
+
+        steps:
+        - uses: actions/checkout@v2
+        - name: Set up Python 3.8.5
+            uses: actions/setup-python@v2
+            with:
+            # Semantic version range syntax or exact version of a Python version
+            python-version: "3.8.5"
+            # Optional - x64 or x86 architecture, defaults to x64
+            architecture: "x64"
+        # You can test your matrix by printing the current Python version
+        - name: Install pipx
+            run: python3 -m pip install --user pipx==0.16.0.0
+        - name: pipx ensurepath
+            run: /home/runner/.local/bin/pipx ensurepath
+        - name: pipX PATH
+            run: PATH=/home/runner/.local/bin:$PATH
+        - name: Install poetry
+            run: pipx install poetry==1.1.0
+        - name: Test environment
+            run: python3 --version ; pip --version ; pipx --version ; pipx run poetry --version ; ls -a ; ls docsource -a
+        - name: Install dependencies
+            run: pipx run poetry install
+        - name: Build website
+            run: make github_action_docs
+        - name: Commit and Push
+            run: |
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            # use account 'github-actions[bot]' to set the git config
+            git add docs
+            git commit -m "new github pages"
+            git push
 
 ******************************************************
 References
