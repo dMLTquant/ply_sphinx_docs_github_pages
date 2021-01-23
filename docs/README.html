@@ -275,16 +275,29 @@ live_docs:
 <div class="section" id="step-05-host-static-website-on-github-pages">
 <h2>Step 05: host static website on GitHub Pages<a class="headerlink" href="#step-05-host-static-website-on-github-pages" title="Permalink to this headline">¶</a></h2>
 <p>Add the following to the <strong>root Makefile</strong> and run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">github_docs</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>github_docs:
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># manual</span>
+github_docs:
     rm -rf docs
+    mkdir ./docs <span class="o">&amp;&amp;</span> touch ./docs/.nojekyll
     @cp -a ./README.rst ./docsource/README.rst
     @make -C ./docsource html
     @cp -a ./docsource/_build/html/. ./docs
+
+<span class="c1"># automatic github action push or pull request</span>
+github_action_docs:
+    rm -rf docs
+    mkdir docs <span class="o">&amp;&amp;</span> touch docs/.nojekyll
+    @cp -a README.rst docsource/README.rst
+    rm -rf docsource/_build <span class="o">&amp;&amp;</span> mkdir docsource/_build
+    rm -rf docsource/_autosummary
+    pipx run poetry run sphinx-build -b html docsource docsource/_build/html
+    @cp -a docsource/_build/html/* docs
 </pre></div>
 </div>
 <p>This will:</p>
 <ul class="simple">
 <li><p>remove docs folder cache that might have been previously built to allow for a fresh version</p></li>
+<li><p>add a <code class="docutils literal notranslate"><span class="pre">.nojekyll</span></code> file to <a class="reference external" href="https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/">github.blog: Bypassing Jekyll on GitHub Pages</a></p></li>
 <li><p>copy the latest README.rst file (guide) into the <code class="docutils literal notranslate"><span class="pre">docsource</span></code> directory</p></li>
 <li><p>run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> to build the documentation into the <code class="docutils literal notranslate"><span class="pre">_build</span></code> directory</p></li>
 <li><p>the <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> command is actually saved in the <code class="docutils literal notranslate"><span class="pre">./docsource/Makfile</span></code></p></li>
@@ -294,6 +307,59 @@ live_docs:
 <p class="admonition-title">Important</p>
 <p>After the repository and the <strong>docs</strong> directory have been committed to GitHub go to the repository
 settings and select it as the <strong>Source</strong> for GitHub Pages.</p>
+</div>
+</div>
+<div class="section" id="step-06-github-actions-to-auto-build-github-pages">
+<h2>Step 06: github actions to auto build github pages<a class="headerlink" href="#step-06-github-actions-to-auto-build-github-pages" title="Permalink to this headline">¶</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Use a GitHub Action saved in <code class="docutils literal notranslate"><span class="pre">.github/workflows/publish.yml</span></code></p>
+</div>
+<div class="highlight-yml notranslate"><div class="highlight"><pre><span></span>name: gh-pages publisher 🚀
+
+on:
+push:
+    branches: [master]
+pull_request:
+    branches: [master]
+
+jobs:
+build:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8.5
+        uses: actions/setup-python@v2
+        with:
+        # Semantic version range syntax or exact version of a Python version
+        python-version: &quot;3.8.5&quot;
+        # Optional - x64 or x86 architecture, defaults to x64
+        architecture: &quot;x64&quot;
+    # You can test your matrix by printing the current Python version
+    - name: Install pipx
+        run: python3 -m pip install --user pipx==0.16.0.0
+    - name: pipx ensurepath
+        run: /home/runner/.local/bin/pipx ensurepath
+    - name: pipX PATH
+        run: PATH=/home/runner/.local/bin:$PATH
+    - name: Install poetry
+        run: pipx install poetry==1.1.0
+    - name: Test environment
+        run: python3 --version ; pip --version ; pipx --version ; pipx run poetry --version ; ls -a ; ls docsource -a
+    - name: Install dependencies
+        run: pipx run poetry install
+    - name: Build website
+        run: make github_action_docs
+    - name: Commit and Push
+        run: |
+        git config --global user.name &quot;github-actions[bot]&quot;
+        git config --global user.email &quot;41898282+github-actions[bot]@users.noreply.github.com&quot;
+        # use account &#39;github-actions[bot]&#39; to set the git config
+        git add docs
+        git commit -m &quot;new github pages&quot;
+        git push
+</pre></div>
 </div>
 </div>
 <div class="section" id="references">
@@ -339,6 +405,7 @@ settings and select it as the <strong>Source</strong> for GitHub Pages.</p>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#step-05-host-static-website-on-github-pages">Step 05: host static website on GitHub Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-06-github-actions-to-auto-build-github-pages">Step 06: github actions to auto build github pages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#references">References</a></li>
 </ul>
 </li>
