@@ -21,4 +21,4 @@ github_action_docs:
 	rm -rf docsource/_build && mkdir docsource/_build 
 	rm -rf docsource/_autosummary
 	pipx run poetry run sphinx-build -b html docsource docsource/_build
-	@cp -a docsource/_build/html/. docs
+	@cp -a docsource/_build/html/* docs
