@@ -1,3 +1,5 @@
+repo = /home/runner/work/ply_sphinx_docs_github_pages/ply_sphinx_docs_github_pages/
+
 
 # using the makefile inside the docs folder
 # clean the current build then
@@ -21,5 +23,5 @@ github_action_docs:
 	@cp -a ./README.rst ./docsource/README.rst
 	rm -rf ./docsource/_build && mkdir ./docsource/_build 
 	rm -rf ./docsource/_autosummary
-	pipx run poetry run sphinx-build -b html /$${HOME}/.docsource /$${HOME}/.docsource/_build
+	pipx run poetry run sphinx-build -b html /$(repo)/.docsource /$(repo)/.docsource/_build
 	@cp -a ./docsource/_build/html/. ./docs
