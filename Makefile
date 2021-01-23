@@ -1,4 +1,4 @@
-repo = /home/runner/work/ply_sphinx_docs_github_pages/ply_sphinx_docs_github_pages/
+repo = home/runner/work/ply_sphinx_docs_github_pages/ply_sphinx_docs_github_pages
 
 
 # using the makefile inside the docs folder
