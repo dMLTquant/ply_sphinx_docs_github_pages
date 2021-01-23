@@ -2,6 +2,8 @@
 Host reStructured Text Sphinx docs on GitHub Pages
 ######################################################
 
+.. figure:: https://github.com/foolish-dev/ply_sphinx_docs_github_pages/workflows/github%20pages/badge.svg
+
 ******************************************************
 Step 01: Project folder
 ******************************************************
