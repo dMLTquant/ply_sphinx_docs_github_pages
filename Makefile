@@ -20,6 +20,6 @@ github_action_docs:
 	@cp -a README.rst docsource/README.rst
 	rm -rf docsource/_build && mkdir docsource/_build 
 	rm -rf docsource/_autosummary
-	pipx run poetry run sphinx-build -b html docsource docsource/_build
+	pipx run poetry run sphinx-build -b html docsource docsource/_build/html
 	ls docsource docsource/_build/html -a
-	# @cp -a docsource/_build/html/* docs
+	@cp -a docsource/_build/html/* docs
