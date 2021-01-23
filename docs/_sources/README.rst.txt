@@ -23,16 +23,17 @@ Step 01: Project folder
   └── docsource
       └── .gitkeep
 
-******************************************************
-Step 02: sphinx-quickstart
-******************************************************
-
 .. important:: 
     
     In order to replicate this project the following have been used: 
     ``anaconda navigator (v1.10.0)``,
     ``python (v3.8.5)``,
-    ``sphinx-quickstart (v3.4.1)``
+    ``sphinx (v3.4.1)``,
+    ``poetry (v1.1.0)``
+
+******************************************************
+Step 02: sphinx-quickstart
+******************************************************
 
 **Spinx** comes with a built-in utility to help start the documentation process: `sphinx-doc.org: Getting Started <https://www.sphinx-doc.org/en/master/usage/quickstart.html>`_
 Using **sphinx-quickstart** interactive tool you can quickly generate a complete documentation 
