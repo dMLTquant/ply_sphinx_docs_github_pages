@@ -17,7 +17,7 @@ github_docs:
 	@make -C ./docsource html
 	@cp -a ./docsource/_build/html/. ./docs
 
-github_action_docs:
+github_action_docs2:
 	rm -rf docs
 	mkdir ./docs && touch ./docs/.nojekyll
 	@cp -a ./README.rst ./docsource/README.rst
@@ -25,3 +25,8 @@ github_action_docs:
 	rm -rf ./docsource/_autosummary
 	pipx run poetry run sphinx-build -b html /$(repo)/.docsource /$(repo)/.docsource/_build
 	@cp -a ./docsource/_build/html/. ./docs
+
+github_action_docs:
+	ls /$(repo)/.docsource -a
+	cat /$(repo)/.docsource/conf.py
+	find conf.py
