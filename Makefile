@@ -14,6 +14,7 @@ github_docs:
 	@make -C ./docsource html
 	@cp -a ./docsource/_build/html/. ./docs
 
+# automatic github action push or pull request
 github_action_docs:
 	rm -rf docs
 	mkdir docs && touch docs/.nojekyll
@@ -21,5 +22,4 @@ github_action_docs:
 	rm -rf docsource/_build && mkdir docsource/_build 
 	rm -rf docsource/_autosummary
 	pipx run poetry run sphinx-build -b html docsource docsource/_build/html
-	ls docsource docsource/_build/html -a
 	@cp -a docsource/_build/html/* docs
