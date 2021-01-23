@@ -27,6 +27,6 @@ github_action_docs2:
 	@cp -a ./docsource/_build/html/. ./docs
 
 github_action_docs:
-	ls /$(repo)/.docsource -a
-	cat /$(repo)/.docsource/conf.py
+	ls docsource -a
+	cat docsource/conf.py
 	find conf.py
